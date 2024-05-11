@@ -20,3 +20,5 @@ private:
 
 public:
 	Stack() {
+		top = NULL; //Initialize the stack with a null toppointer
+	}
