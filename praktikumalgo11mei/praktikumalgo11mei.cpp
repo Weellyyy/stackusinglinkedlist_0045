@@ -78,5 +78,39 @@ int main() {
 		cout << "4. Exit\n";
 		cout << "Enter your choice: ";
 		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			cout << "Enter the value to push: ";
+			cin >> value;
+			stack.push(value); // Push the entered value onto the stack
+			break;
+		case 2:
+			if (!stack.isEmpty()) {
+				stack.pop(); // Pop the top element from the stack
+			}
+			else {
+				cout << "Stack is empty. Cannot pop." << endl;
+			}
+			break;
+		case 3:
+			if (!stack.isEmpty()) {
+				stack.peek(); // Get the value of the top element
+			}
+			else {
+				cout << "Stack is empty. No top value." << endl;
+			}
+			break;
+
+		case 4:
+			cout << "Exiting program." << endl;
+			break;
+		default:
+			cout << "Invalid choice. Try again." << endl;
+			break;
+		}
+
+		cout << endl;
+	}
 }
 
